@@ -1,0 +1,1 @@
+tellraw @a ["",{"selector":"@a[tag=turn]","color":"aqua"},{"text":" is drawing a card.","color":"aqua"}]
