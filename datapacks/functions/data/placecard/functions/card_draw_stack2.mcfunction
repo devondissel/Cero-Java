@@ -20,8 +20,8 @@ execute if score @e[tag=dummy,limit=1] compatible matches 1 run kill @e[tag=sele
 execute if score @e[tag=dummy,limit=1] compatible matches 1 run function placecard:stack_2
 
 ###announce succes
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=turn] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=selecting] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=turn] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=selecting] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
 execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 run function placecard:succesful
 execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 run tag @e[tag=drawcard] remove drawcard
 

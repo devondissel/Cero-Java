@@ -20,5 +20,5 @@ scoreboard players set @e[tag=deck3,tag=green] color 3
 
 execute as @e[tag=deck3] if score @s color = @e[tag=table,scores={age=1},limit=1] color run scoreboard players set @e[tag=dummy] compatible 0
 
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=turn] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=turn] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
 execute if score @e[tag=dummy,limit=1] compatible matches 1 run function placecard:card_wild4

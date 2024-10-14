@@ -34,11 +34,11 @@ execute if score @e[tag=dummy,limit=1] compatible matches 1 run kill @e[tag=sele
 
 
 ###announce succes
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=turn] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=selecting] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=turn] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=selecting] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
 execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 run function placecard:succesful
 execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 run tag @e[tag=drawcard] remove drawcard
-execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 run tellraw @a ["",{"selector":"@a[tag=turn,limit=1]","color":"aqua"},{"text":" placed down a draw card. The next player in sequence has to draw 2 cards and misses a turn.","color":"aqua"}]
+execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 run tellraw @a ["",{"selector":"@a[tag=turn,limit=1]","color":"aqua"},{"text":" colocó una carta de robar. El siguiente jugador tiene que robar 2 cartas y pierde un turno.","color":"aqua"}]
 
 
 

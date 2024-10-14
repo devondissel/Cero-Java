@@ -25,11 +25,11 @@ function general:update_cardcount
 
 
 #if cardcount is 1
-execute as @s[tag=wild] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 run title @a[tag=turn,scores={cardcount=1}] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
-execute as @s[tag=wild+4] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 if entity @a[tag=turn,tag=player1,scores={cardcount=1}] run title @a[tag=turn] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
-execute as @s[tag=wild+4] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 if entity @a[tag=turn,tag=player2,scores={cardcount=1}] run title @a[tag=turn] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
-execute as @s[tag=wild+4] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 if entity @a[tag=turn,tag=player3,scores={cardcount=1}] run title @a[tag=turn] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
-execute as @s[tag=wild+4] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 if entity @a[tag=turn,tag=player4,scores={cardcount=1}] run title @a[tag=turn] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
+execute as @s[tag=wild] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 run title @a[tag=turn,scores={cardcount=1}] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
+execute as @s[tag=wild+4] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 if entity @a[tag=turn,tag=player1,scores={cardcount=1}] run title @a[tag=turn] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
+execute as @s[tag=wild+4] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 if entity @a[tag=turn,tag=player2,scores={cardcount=1}] run title @a[tag=turn] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
+execute as @s[tag=wild+4] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 if entity @a[tag=turn,tag=player3,scores={cardcount=1}] run title @a[tag=turn] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
+execute as @s[tag=wild+4] if score @e[tag=dummy,limit=1] lobbysign1 matches 1 if entity @a[tag=turn,tag=player4,scores={cardcount=1}] run title @a[tag=turn] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
 
 
 

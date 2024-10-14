@@ -68,4 +68,4 @@ execute if score @e[tag=dummy,limit=1] deckshuffle2 matches 2 run tag @a[tag=tur
 execute if score @e[tag=dummy,limit=1] deckshuffle2 matches 2 run tag @a[tag=turn] remove turn
 execute if score @e[tag=dummy,limit=1] deckshuffle2 matches 80 run tag @a[tag=faketurn] add turn
 execute if score @e[tag=dummy,limit=1] deckshuffle2 matches 80 run tag @a[tag=faketurn] remove faketurn
-execute if score @e[tag=dummy,limit=1] deckshuffle2 matches 80 run tellraw @a ["",{"selector":"@e[tag=turn]","color":"gold"},{"selector":"@e[tag=stacking]","color":"gold"},{"text":" is playing.","color":"gold"}]
+execute if score @e[tag=dummy,limit=1] deckshuffle2 matches 80 run tellraw @a ["",{"selector":"@e[tag=turn]","color":"gold"},{"selector":"@e[tag=stacking]","color":"gold"},{"text":" está jugando.","color":"gold"}]

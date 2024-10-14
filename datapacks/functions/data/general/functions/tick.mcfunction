@@ -34,7 +34,7 @@ effect give @e[type=villager] invisibility 1 1 true
 
 #start game
 execute as @a at @s if block ~ ~-1 ~ black_concrete if score @e[tag=dummy,limit=1] ingame matches 1 run function general:start
-execute as @a at @s if block ~ ~-1 ~ black_concrete if score @e[tag=dummy,limit=1] ingame matches 2 run title @s[tag=!spectator] actionbar ["",{"text":"There is already a game in progress.","color":"dark_red"}]
+execute as @a at @s if block ~ ~-1 ~ black_concrete if score @e[tag=dummy,limit=1] ingame matches 2 run title @s[tag=!spectator] actionbar ["",{"text":"Ya hay una partida en progreso.","color":"dark_red"}]
 
 tellraw @a[scores={twitter=1..}] ["",{"text":"twitter.com/mynckey","color":"aqua","clickEvent":{"action":"open_url","value":"http://twitter.com/mynckey"}}]
 scoreboard players set @a twitter 0
@@ -43,10 +43,10 @@ scoreboard players set @a twitter 0
 
 
 #button for stop
-execute if block 42 28 -44 minecraft:birch_button[powered=true] run tellraw @a[tag=player1] ["",{"text":"Are you sure you want to quit? ","color":"dark_red"},{"text":"(click here)","color":"gray","clickEvent":{"action":"run_command","value":"/trigger stop"}}]
-execute if block 33 28 -43 minecraft:birch_button[powered=true] run tellraw @a[tag=player4] ["",{"text":"Are you sure you want to quit? ","color":"dark_red"},{"text":"(click here)","color":"gray","clickEvent":{"action":"run_command","value":"/trigger stop"}}]
-execute if block 34 28 -34 minecraft:birch_button[powered=true] run tellraw @a[tag=player2] ["",{"text":"Are you sure you want to quit? ","color":"dark_red"},{"text":"(click here)","color":"gray","clickEvent":{"action":"run_command","value":"/trigger stop"}}]
-execute if block 43 28 -35 minecraft:birch_button[powered=true] run tellraw @a[tag=player3] ["",{"text":"Are you sure you want to quit? ","color":"dark_red"},{"text":"(click here)","color":"gray","clickEvent":{"action":"run_command","value":"/trigger stop"}}]
+execute if block 42 28 -44 minecraft:birch_button[powered=true] run tellraw @a[tag=player1] ["",{"text":"¿Estás seguro de que quieres salir? ","color":"dark_red"},{"text":"(clic aquí)","color":"gray","clickEvent":{"action":"run_command","value":"/trigger stop"}}]
+execute if block 33 28 -43 minecraft:birch_button[powered=true] run tellraw @a[tag=player4] ["",{"text":"¿Estás seguro de que quieres salir? ","color":"dark_red"},{"text":"(clic aquí)","color":"gray","clickEvent":{"action":"run_command","value":"/trigger stop"}}]
+execute if block 34 28 -34 minecraft:birch_button[powered=true] run tellraw @a[tag=player2] ["",{"text":"¿Estás seguro de que quieres salir? ","color":"dark_red"},{"text":"(clic aquí)","color":"gray","clickEvent":{"action":"run_command","value":"/trigger stop"}}]
+execute if block 43 28 -35 minecraft:birch_button[powered=true] run tellraw @a[tag=player3] ["",{"text":"¿Estás seguro de que quieres salir? ","color":"dark_red"},{"text":"(clic aquí)","color":"gray","clickEvent":{"action":"run_command","value":"/trigger stop"}}]
 
 execute if block 42 28 -44 minecraft:birch_button[powered=true] run setblock 42 28 -44 minecraft:birch_button[powered=false,facing=north]
 execute if block 33 28 -43 minecraft:birch_button[powered=true] run setblock 33 28 -43 minecraft:birch_button[powered=false,facing=west]
@@ -61,7 +61,7 @@ execute if block 43 28 -35 minecraft:birch_button[powered=true] run setblock 43 
 execute if score @e[tag=dummy,limit=1] ingame matches 2 run function general:tickingame
 execute as @a at @s if block ~ ~-5 ~ minecraft:soul_sand run tp @s ~8 ~-1 ~-15
 team join spectator @a[scores={spectator=1}]
-execute if score @e[tag=dummy,limit=1] ingame matches 1 as @a[scores={spectator=1}] run title @s actionbar ["",{"text":"You are a spectator","color":"green"}]
+execute if score @e[tag=dummy,limit=1] ingame matches 1 as @a[scores={spectator=1}] run title @s actionbar ["",{"text":"Eres un espectador","color":"green"}]
 
 
 #pinkwoolthingy

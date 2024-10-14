@@ -34,12 +34,12 @@ execute if score @e[tag=dummy,limit=1] compatible matches 1 run kill @e[tag=sele
 
 
 ###announce succes
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=turn] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=selecting] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=turn] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=selecting] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
 execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 run function placecard:succesful
 execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 run tag @e[tag=drawcard] remove drawcard
-execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 unless score @e[tag=dummy,limit=1] playercount matches 2 run tellraw @a ["",{"selector":"@a[tag=turn,limit=1]","color":"aqua"},{"text":" placed down a reverse card. The order of play has been reversed.","color":"aqua"}]
-execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 if score @e[tag=dummy,limit=1] playercount matches 2 run tellraw @a ["",{"selector":"@a[tag=turn,limit=1]","color":"aqua"},{"text":" placed down a reverse card.","color":"aqua"}]
+execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 unless score @e[tag=dummy,limit=1] playercount matches 2 run tellraw @a ["",{"selector":"@a[tag=turn,limit=1]","color":"aqua"},{"text":" colocó una carta de reversa. El orden del juego ha sido invertido.","color":"aqua"}]
+execute as @s if score @e[tag=dummy,limit=1] compatible matches 1 if score @e[tag=dummy,limit=1] playercount matches 2 run tellraw @a ["",{"selector":"@a[tag=turn,limit=1]","color":"aqua"},{"text":" colocó una carta de reversa.","color":"aqua"}]
 
 
 

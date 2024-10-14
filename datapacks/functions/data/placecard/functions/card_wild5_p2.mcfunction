@@ -20,7 +20,7 @@ scoreboard players set @e[tag=deck2,tag=green] color 3
 
 execute as @e[tag=deck2] if score @s color = @e[tag=table,scores={age=1},limit=1] color run scoreboard players set @e[tag=dummy] compatible 0
 
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=selecting] actionbar ["",{"text":"You can't play this card","color":"dark_red"}]
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run summon minecraft:armor_stand 37.5 26.5 -35.0 {NoGravity:1b,Invisible:1b,CustomNameVisible:1b,Tags:["select_draw1"],ArmorItems:[{},{},{},{id:"minecraft:lime_concrete",Count:1b}],CustomName:'{"text":"Play","color":"green"}'}
-execute if score @e[tag=dummy,limit=1] compatible matches 0 run summon minecraft:armor_stand 39.5 26.5 -35.0 {NoGravity:1b,Invisible:1b,CustomNameVisible:1b,Tags:["select_draw2"],ArmorItems:[{},{},{},{id:"minecraft:yellow_concrete",Count:1b}],CustomName:'{"text":"Keep","color":"yellow"}'}
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run title @a[tag=selecting] actionbar ["",{"text":"No puedes usar esta carta","color":"dark_red"}]
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run summon minecraft:armor_stand 37.5 26.5 -35.0 {NoGravity:1b,Invisible:1b,CustomNameVisible:1b,Tags:["select_draw1"],ArmorItems:[{},{},{},{id:"minecraft:lime_concrete",Count:1b}],CustomName:'{"text":"Jugar","color":"green"}'}
+execute if score @e[tag=dummy,limit=1] compatible matches 0 run summon minecraft:armor_stand 39.5 26.5 -35.0 {NoGravity:1b,Invisible:1b,CustomNameVisible:1b,Tags:["select_draw2"],ArmorItems:[{},{},{},{id:"minecraft:yellow_concrete",Count:1b}],CustomName:'{"text":"Guardar","color":"yellow"}'}
 execute if score @e[tag=dummy,limit=1] compatible matches 1 run function placecard:card_wild5

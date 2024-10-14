@@ -168,8 +168,8 @@ tp @a[tag=spectating,scores={cameraposition=5}] 28.5 29 -38.5
 
 
 
-execute as @a[tag=spectator,scores={sneak=0},tag=spectating] run title @s actionbar ["",{"text":"Right click to switch cameras. Hold sneak to exit.","color":"gray"}]
-execute as @a[tag=spectator,scores={sneak=0},tag=!spectating] run title @s actionbar ["",{"text":"Hold sneak to spectate","color":"gray"}]
+execute as @a[tag=spectator,scores={sneak=0},tag=spectating] run title @s actionbar ["",{"text":"Haz clic derecho para cambiar de cámara. Manténte agachado para salir.","color":"gray"}]
+execute as @a[tag=spectator,scores={sneak=0},tag=!spectating] run title @s actionbar ["",{"text":"Mantente agachado para espectar","color":"gray"}]
 execute as @a[tag=spectator,scores={sneak=1..2}] run title @s actionbar ["",{"text":"","color":"aqua"},{"text":"█ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █","color":"gray"}]
 execute as @a[tag=spectator,scores={sneak=3..4}] run title @s actionbar ["",{"text":"█ ","color":"aqua"},{"text":"█ █ █ █ █ █ █ █ █ █ █ █ █ █ █","color":"gray"}]
 execute as @a[tag=spectator,scores={sneak=5..6}] run title @s actionbar ["",{"text":"█ █ ","color":"aqua"},{"text":"█ █ █ █ █ █ █ █ █ █ █ █ █ █","color":"gray"}]

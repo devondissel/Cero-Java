@@ -8,8 +8,8 @@ tag @a[tag=turn] remove turn
 
 
 
-summon minecraft:armor_stand 34.75 26.5 -39 {NoGravity:1b,Invisible:1b,CustomNameVisible:1b,Tags:["select_draw1"],ArmorItems:[{},{},{},{id:"minecraft:lime_concrete",Count:1b}],CustomName:'{"text":"Play","color":"green"}'}
-summon minecraft:armor_stand 34.75 26.5 -39 {NoGravity:1b,Invisible:1b,CustomNameVisible:1b,Tags:["select_draw2"],ArmorItems:[{},{},{},{id:"minecraft:yellow_concrete",Count:1b}],CustomName:'{"text":"Keep","color":"yellow"}'}
+summon minecraft:armor_stand 34.75 26.5 -39 {NoGravity:1b,Invisible:1b,CustomNameVisible:1b,Tags:["select_draw1"],ArmorItems:[{},{},{},{id:"minecraft:lime_concrete",Count:1b}],CustomName:'{"text":"Usar","color":"green"}'}
+summon minecraft:armor_stand 34.75 26.5 -39 {NoGravity:1b,Invisible:1b,CustomNameVisible:1b,Tags:["select_draw2"],ArmorItems:[{},{},{},{id:"minecraft:yellow_concrete",Count:1b}],CustomName:'{"text":"Guardar","color":"yellow"}'}
 
 tp @e[tag=select_draw1] 34.75 26.5 -40
 tp @e[tag=select_draw2] 34.75 26.5 -38

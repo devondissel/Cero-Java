@@ -296,7 +296,7 @@ execute if score @e[tag=dummy,limit=1] startanimation matches 216 run scoreboard
 execute if score @e[tag=dummy,limit=1] startanimation matches 216 as @e[tag=table,limit=1] run function placecard:announce_first
 
 
-execute if score @e[tag=dummy,limit=1] startanimation matches 219 run tellraw @a ["",{"selector":"@e[tag=turn]","color":"gold"},{"text":" begins.","color":"gold"}]
+execute if score @e[tag=dummy,limit=1] startanimation matches 219 run tellraw @a ["",{"selector":"@e[tag=turn]","color":"gold"},{"text":" empieza.","color":"gold"}]
 
 tp @a[tag=player1] 38 27 -45
 tp @a[tag=player2] 38 27 -33

@@ -44,9 +44,9 @@ scoreboard players set @e[tag=dummy] skipcard 1
 
 execute as @a at @s run title @s times 20 55 10
 execute as @a at @s if block ~ 7 ~ minecraft:crafting_table run title @s title ["",{"text":"# ","obfuscated":true,"color":"yellow"},{"text":"Cero","color":"red"},{"text":" #","obfuscated":true,"color":"yellow"}]
-execute as @a at @s if block ~ 7 ~ minecraft:crafting_table run title @s subtitle ["",{"text":"By: Mynckey","color":"gray"}]
-execute as @a at @s unless block ~ 7 ~ minecraft:crafting_table run title @s title ["",{"text":"A game of Cero has started","color":"red"}]
-execute as @a at @s unless block ~ 7 ~ minecraft:crafting_table run title @s subtitle ["",{"text":"Hold sneak to spectate"}]
+execute as @a at @s if block ~ 7 ~ minecraft:crafting_table run title @s subtitle ["",{"text":"Por: Mynckey","color":"gray"}]
+execute as @a at @s unless block ~ 7 ~ minecraft:crafting_table run title @s title ["",{"text":"Ha comenzado una partida de Cero","color":"red"}]
+execute as @a at @s unless block ~ 7 ~ minecraft:crafting_table run title @s subtitle ["",{"text":"Mantente agachado para espectar"}]
 
 
 scoreboard players set @a stop 0
@@ -56,11 +56,11 @@ scoreboard players set @e[tag=dummy] wait 0
 
 
 ####mention the modifiers
-execute if score @e[tag=dummy,limit=1] lobbysign1 matches 1 run tellraw @a ["",{"text":"The player can't finish with a black card.","color":"gray"}]
-execute if score @e[tag=dummy,limit=1] lobbysign1 matches 2 run tellraw @a ["",{"text":"The player can finish with any card.","color":"gray"}]
+execute if score @e[tag=dummy,limit=1] lobbysign1 matches 1 run tellraw @a ["",{"text":"El jugador no puede terminar con una carta negra.","color":"gray"}]
+execute if score @e[tag=dummy,limit=1] lobbysign1 matches 2 run tellraw @a ["",{"text":"El jugador puede terminar con cualquier carta.","color":"gray"}]
 
-execute if score @e[tag=dummy,limit=1] lobbysign3 matches 1 run tellraw @a ["",{"text":"Draw cards can be stacked.","color":"gray"}]
-execute if score @e[tag=dummy,limit=1] lobbysign3 matches 2 run tellraw @a ["",{"text":"Draw cards can't be stacked.","color":"gray"}]
+execute if score @e[tag=dummy,limit=1] lobbysign3 matches 1 run tellraw @a ["",{"text":"Las cartas robadas se pueden apilar.","color":"gray"}]
+execute if score @e[tag=dummy,limit=1] lobbysign3 matches 2 run tellraw @a ["",{"text":"Las cartas robadas no se pueden apilar.","color":"gray"}]
 
 scoreboard players set @a[tag=spectator] sneak 0
 scoreboard players set @a[tag=spectator] sneaktimer 0
@@ -80,6 +80,6 @@ function general:cardcount
 
 data merge block 66 20 -78 {Text1:'{"text":""}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":""}'}
 data merge block 66 20 -77 {Text1:'{"text":""}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":""}'}
-data merge block 66 20 -76 {Text1:'{"text":"You can\'t change","clickEvent":{"action":"run_command","value":"tellraw @s [\\"\\",{\\"text\\":\\"<Chopper2112> It\'s supposed to say while not when reeeeee\\"}]"},"color":"dark_red"}',Text2:'{"text":"the settings while","color":"dark_red"}',Text3:'{"text":"a game is in","color":"dark_red"}',Text4:'{"text":"progress","color":"dark_red"}'}
+data merge block 66 20 -76 {Text1:'{"text":"No puedes","clickEvent":{"action":"run_command","value":"tellraw @s [\\"\\",{\\"text\\":\\"<Chopper2112> Se supone que debía decir \'mientras\' y no \'cuando\' reeeeee\\"}]"},"color":"dark_red"}',Text2:'{"text":"cambiar la config","color":"dark_red"}',Text3:'{"text":"mientras el juego","color":"dark_red"}',Text4:'{"text":"está en curso","color":"dark_red"}'}
 data merge block 66 20 -75 {Text1:'{"text":""}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":""}'}
 data merge block 66 20 -74 {Text1:'{"text":""}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":""}'}

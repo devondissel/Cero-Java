@@ -1,1 +1,1 @@
-tellraw @a ["",{"selector":"@a[tag=turn]","color":"aqua"},{"text":" is drawing a card.","color":"aqua"}]
+tellraw @a ["",{"selector":"@a[tag=turn]","color":"aqua"},{"text":" está robando una carta.","color":"aqua"}]
