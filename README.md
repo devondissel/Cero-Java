@@ -1,1 +1,1 @@
-This fork is for a Spanish translation, made by Yushiko. All credit goes out to him.
+This is the uno map, made for Minecraft Java 1.16.5
